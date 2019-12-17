@@ -5,6 +5,8 @@ Original project: https://github.com/menzi11/BullshitGenerator
 
 Chinese web version https://suulnnka.github.io/BullshitGenerator/index.html
 
+English web version https://yingxiao-netizen.github.io/random-bot/index.html
+
 修改:  
 1.设计并移植至浏览器  
 2.修正标点及布局的bug  
