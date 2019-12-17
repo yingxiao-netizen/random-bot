@@ -1,0 +1,442 @@
+<html>
+  <head>
+    <title>Bullshit Essay Generator</title>
+    <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <script src="https://hm.baidu.com/hm.js?058d1e446dd338b69f2e385ba2f930f2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM8WXEWW3P"></script>
+  </head>
+  <body>
+    <div id="主体">
+      <div id="标题">Essay Generator</div>
+      <div id="主题">
+        <span>Theme</span>
+        <input></input>
+        <button onclick="生成文章()">Generate</button>
+      </div>
+      <div id="文章"></div>
+    </div>
+    <div id="声明">
+      <p id="声明文字">Please do not use the generated essay for actual purpose</p>
+      <p><a class="链接" href="声明.txt">Declearation</a></p>
+    </div>
+    <div id="页脚">
+      <p>
+        Chinese Web ver
+        <a class="链接" href="https://github.com/suulnnka/BullshitGenerator"><svg class="图标" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+        @<a class="链接" href="https://www.zhihu.com/people/su-lan-qia">suulnnka</a>
+       </p>
+      <p>
+        Engrish Web ver
+        <a class="链接" href="https://github.com/menzi11/BullshitGenerator"><svg class="图标" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+        @<a class="链接" href="https://www.instagram.com/hehe_love_bot/?hl=en">frances_HEHE_bot</a>
+      </p>
+    </div>
+  </body>
+</html>
+
+<script>
+let _hmt = window._hmt || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BM8WXEWW3P');
+function track(eventName, title, seed) {
+    gtag('event', eventName, {'event_label': title,'seed': seed,'title_seed':title+'_'+seed});
+    _hmt.push(['_trackEvent', eventName, 'title', title]);
+    _hmt.push(['_trackEvent', eventName, 'title_seed', title+'_'+seed]);
+}
+window.$ = function (selector) {
+    return document.querySelector(selector);
+}
+function 获取网址参数(参数) {
+    return new URL(window.location.href).searchParams.get(参数)
+}
+let 论述 = [
+    'Exactly how did the occurrence of 主题 come together, and if was not for 主题, how would it turn out. ',
+    '主题, how should we bring it to life. ',
+    'with these questions, let us take another look at 主题. ',
+    'The key of 主题 is how it needs to be written. ',
+    'We tend to think that if we get to the heart of the matter, everything else will work itself out. ',
+    'What is heart of the problem. ',
+    'How did 主题 happen? ',
+    'Generally, we must consider it carefully. ',
+    'To figure out, what exactly is 主题. ',
+    'Knowing exactly what 主题 is, is the key to solving all problems. ',
+    'Personally, I have to say that 主题 means a lot to me. ',
+    'I have been carefully considering this issue and thinking about this decision day and night. ',
+    '主题, where would it lead us? Where will us be if it does not happen. ',
+    'Under this difficult decision, I thought long and hard, could not event sleep and eat peacefully. ',
+    'In life, if 主题 occurred, we would have to consider the legitimacy of its existence. ',
+    'This fact means a lot to me, and I believe it means something to the world. ',
+    'We all know, if it means something then we have to consider it carefully. ',
+    'Tiny as an ant, but beautiful as a god. Flying in the ocean of books and knowledge is indeed a lifetime of imagination, but I want to make some contribution to this society. ',
+    'One persons strength is not enough, then double the strength. ',
+    'Everyone is an independent individual, with our own direction for self-development. ',
+    'This is a long road, sometimes we find ourselves distracted and lost our way. ',
+    'I do not know if anyone feels this trance feeling as I do. ',
+    'If we always measure everything with our own scale, we will end up with nothing. ',
+    'So we can not expect anything from life, we can not complain about life, on the contrary, we should live this short life with gratitude. ',
+    'Reflect on the 主题 behaviour. At this moment, I thought a lot about my true intention and purpose. ',
+    'My 主题 will affect the environment of the surrounding to some degree. ',
+    'As for the reason of this 主题, it is obvious that there is a subjective attitude. It shows that my ideologies are not advanced enough. ',
+    'But, above all, the presence of 主题 still means something. ',
+    '主题 seems to be a coincidence, but if we look at thing from a bigger picture, this seems to be inevitable fact. ',
+    'Under the inevitable conflict, we must resolve this problem. ',
+    'Personally, 主题 is not only a huge event, it might even change my life. ',
+    'Here, left footprints of my growth, left emotional pictures before my eyes, left my regretful tears, but it brought me more meaningful experience and lessons in being a person. ',
+    'Through the 主题, I felt that although it was accidental, it was also the inevitable result of letting myself loose. ',
+    'I did not attach importance to the ways of 主题 in my mind. ',
+    'In this harmonious society, people should live in harmony and develop in harmony. ',
+    'Although I had a negative experience, it made me understand a lot of principles about how to behave and do things. Some of these principles could only be truly realized after the EVENT. ',
+    'Now, I deeply feel that this is an extremely important turning point. ',
+    'I will serious reflect upon this 主题, and think carefully before my action. ',
+    'I also want to improve my ideological understanding and strengthen my conceptual awareness through this 主题. ',
+    'My heart bleeds at the thought. ',
+    'This vision quest never ends. Imagine an evolving of what could be. ',
+    'It can be difficult to know where to begin. ',
+    'Who are we? Where on the great circuit will we be reborn? ',
+    'Today, science tells us that the essence of nature is synchronicity. ',
+    'Indigo Child, look within and beckon yourself. Although you may not realize it, you are astral. Have you found your vision quest? ',
+    'It is time to take choice to the next level. Imagine an evolving of what could be. It is a sign of things to come. ',
+    'Now, solving the problem of 主题, is a extremely important task. So, ',
+    'We are forced to face the awkward truth, that is, ',
+    'But this is far from the core of the issue, the more important problem is, ',
+    'Everyone must face these issues.  When facing these problems, ',
+    'In that case, ',
+    'Then, ',
+    'In mine opinion, ',
+    'Generally, ',
+    'In conclusion, ',
+    'Now that how to, ',
+    'After the above discussion ',
+]
+let 名人名言 = [
+    'John Wooden once said, Things work out best for those who make the best of how things work out.',
+    'Ernest Hemingway once said, Courage is grace under pressure.',
+    'Jim Rohn once said, If you are not willing to risk the usual, you will have to settle for the ordinary.',
+    'Albert Einstein once said, Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.',
+    'Swami Vivekananda once said,Take up one idea. Make that one idea your life -- think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success.',
+    'Walt Disney once said, All our dreams can come true if we have the courage to pursue them.',
+    'Confucius once said, It does not matter how slowly you go, so long as you do not stop.',
+    'Winston Churchill once said, Success is walking from failure to failure with no loss of enthusiasm.',
+    'Warren Buffett once said, Someone is sitting in the shade today because someone planted a tree a long time ago.',
+    'Denzel Washington once said, Success? I do not know what that word means. I am happy. But success, that goes back to what in somebodys eyes success means. For me, success is inner peace. That is a good day for me.',
+    'Albert Einstein once said, Try not to become a person of success, but rather try to become a person of value.',
+    'Nelson Mandela once said, There is no easy walk to freedom anywhere, and many of us will have to pass through the valley of the shadow of death again and again before we reach the mountaintop of our desires.',
+    'Charles Darwin once said, It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.',
+    "Helen Keller once said, The best and most beautiful things in the world cannot be seen or even touched -- they must be felt with the heart.",
+    "Eleanor Roosevelt once said, Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+    "Mahatma Gandhi once said, Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "Frank Sinatra once said, The best revenge is massive success.",
+    "Thomas Edison once said, I have not failed. I've just found 10,000 ways that won't work.",
+    "Malcolm Forbes once said, When you cease to dream you cease to live.",
+    "Oprah Winfrey once said, Failure is another steppingstone to greatness.",
+    "Oscar Wilde once said, What seems to us as bitter trials are often blessings in disguise.",
+    "Bruce Feirstein once said, The distance between insanity and genius is measured only by success.",
+    "Richard Branson once said, To me, business isn't about wearing suits or pleasing stockholders. It's about being true to yourself, your ideas and focusing on the essentials.",
+    "Michael Jordan once said, You must expect great things of yourself before you can do them.",
+    "Albert Einstein once said, If you can't explain it simply, you don't understand it well enough.",
+    "Katie Couric once said, You can't please everyone, and you can't make everyone like you.",
+    "Neil Armstrong once said, I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
+    "Arthur Ashe once said, Start where you are. Use what you have. Do what you can.",
+    "Socrates once said, The unexamined life is not worth living.",
+    "Ludwig Wittgenstein once said, Whereof one cannot speak, thereof one must be silent.",
+    "William of Ockham once said, Entities should not be multiplied unnecessarily.",
+    "Thomas Hobbes once said, The life of man (in a state of nature) is solitary, poor, nasty, brutish, and short.",
+    "Martin Heidegger once said, He who thinks great thoughts, often makes great errors.",
+    "Hegel once said, What is rational is actual and what is actual is rational.",
+    "Friedrich Nietzsche once said, God is dead! He remains dead! And we have killed him.",
+    "Camus once said, There is but one truly serious philosophical problem, and that is suicide.",
+    "Heraclitus once said, One cannot step twice in the same river",
+    "Immanuel Kant once said, Happiness is not an ideal of reason but of imagination.",
+    "John Locke once said, No man's knowledge here can go beyond his experience.",
+    "Socrates once said, There is only one good, knowledge, and one evil, ignorance.",
+    "Voltaire once said, If God did not exist, it would be necessary to invent Him.",
+    "Aristotle once said, We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "Hegel once said, Only one man ever understood me, and he didn’t understand me",
+    "Søren Kierkegaard once said, Life must be understood backward. But it must be lived forward.",
+    "Plato once said, You can discover more about a person in an hour of play than in a year of conversation.",
+    "Karl Marx once said, Religion is the sign of the oppressed ... it is the opium of the people.",
+    "Baruch Spinoza once said, If men were born free, they would, so long as they remained free, form no conception of good and evil.",
+    "Jean-Paul Sartre once said, Man is condemned to be free.",
+    "Plato once said, That man is wisest who, like Socrates, realizes that his wisdom is worthless.",
+    "Socrates once said, The only thing I know is that I know nothing.",
+    "Denis Diderot once said, Man will never be free until the last king is strangled with the entrails of the last priest.",
+    "René Descartes once said, If you would be a real seeker after truth, it is necessary that at least once in your life you doubt, as far as possible, all things.",
+    "Epictetus once said, Freedom is secured not by the fulfilling of one's desires, but by the removal of desire",
+    "Anaxagoras once said, In everything, there is a share of everything.",
+    "Democritus once said, The brave man is he who overcomes not only his enemies but his pleasures.",
+    "Aleksandr Solzhenitsyn once said, It is not because the truth is too difficult to see that we make mistakes... we make mistakes because the easiest and most comfortable course for us is to seek insight where it accords with our emotions - especially selfish ones.",
+    "Confucius once said, The man who moves a mountain begins by carrying away small stones.",
+    "Laozi once said, Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+    "Confucius once said, To study and not think is a waste, to think and not study is dangerous.",
+]
+let 后面垫话 = [
+    'what is behind this phenomenon is thought-provoking. ',
+    'with this word of wisdom, we need to take a careful look into this issue: ',
+    'this inspired me， ',
+    'this quote is short, but it got me thinking. ',
+    'this sentence seems simple, but the gloominess behind it is thought-provoking. ',
+    'this quote takes us to a new dimension, so that we are able to think about the problem from a different angle. ',
+    'this seemed to answer my question. ',
+]
+let 前面垫话 = [
+    'Have once siad',
+    'Once said casually',
+    'Have once mentioned',
+    'Shared something deeply profound'
+]
+let 初始主题 = [
+    'how many hairs do we loose in a day',
+    'what to eat for lunch',
+    'withdraw from the student union',
+    'good good study',
+    'the meaning of life',
+    'environmental sustainability'
+]
+let 下取整 = Math.floor;
+let 同余乘数 = 214013;
+let 同余加数 = 2531011;
+let 同余模 = Math.pow(2,32);
+let 随机种子 = 获取网址参数('随机种子') || 下取整( 随便取一个数(0, 同余模, Math.random) );
+let 主题 = 获取网址参数('主题') || 随便取一句(初始主题)
+$('input').value = 主题;
+// LCG https://en.wikipedia.org/wiki/Linear_congruential_generator
+function 同余发生器() {
+    随机种子 = ( 随机种子 * 同余乘数 + 同余加数 ) % 同余模;
+    return 随机种子 / 同余模;
+};
+function 随便取一句(列表){
+    let 坐标 = 下取整( 同余发生器() * 列表.length );
+    return 列表[坐标];
+}
+function 随便取一个数(最小值 = 0,最大值 = 100,随机数函数 = 同余发生器){
+    let 数字 = 随机数函数() * ( 最大值 - 最小值 ) + 最小值;
+    return 数字;
+}
+function 来点名人名言(){
+    let 名言 = 随便取一句(名人名言)
+    名言 = 名言.replace('曾经说过', 随便取一句(前面垫话) )
+    名言 = 名言.replace('这不禁令我深思', 随便取一句(后面垫话) )
+    return 名言
+}
+function 来点论述(){
+    let 句子 = 随便取一句(论述);
+    句子 = 句子.replace(RegExp('主题', 'g'),主题);
+    return 句子;
+}
+function 增加段落(段落){
+    if(段落[段落.length-1] === ' '){
+        段落 = 段落.slice(0,-2)
+    }
+    return '　　' + 段落 + '. '
+}
+function 生成文章(){
+    主题 = $('input').value
+    history.pushState({url: window.location.href}, null ,'?主题=' + 主题 + '&随机种子=' + 随机种子);
+    track('generator', 主题, 随机种子);
+    let 文章 = []
+    let 段落 = '';
+    let 文章长度 = 0;
+    while( 文章长度 < 12000 ){
+        let 随机数 = 随便取一个数();
+        if(随机数 < 5 && 段落.length > 200){
+            段落 = 增加段落(段落);
+            文章.push(段落);
+            段落 = '';
+        }else if(随机数 < 20){
+            let 句子 = 来点名人名言();
+            文章长度 = 文章长度 + 句子.length;
+            段落 = 段落 + 句子;
+        }else{
+            let 句子 = 来点论述();
+            文章长度 = 文章长度 + 句子.length;
+            段落 = 段落 + 句子;
+        }
+    }
+    段落 = 增加段落(段落);
+    文章.push(段落);
+    let 排版 = '<div>' + 文章.join('</div><div>') + '</div>';
+    $('#文章').innerHTML = 排版;
+    $('#声明文字').style.display = 'block'
+}
+if (获取网址参数('主题')) {
+    生成文章();
+    track('shared', 主题, 随机种子);
+}
+</script>
+<style>
+  @media screen and (max-width: 1024px) {
+    html{
+      font-size: 2vw;
+      color: #333333;
+    }
+    body{
+      margin: 0;
+    }
+    #主体{
+      border: 2px solid #333333;
+      margin: 6px;
+      padding: 6px;
+      background: #f8f8f8;
+    }
+    #标题{
+      font-size: 3rem;
+      line-height: 3rem;
+      text-align: center;
+    }
+    #主题{
+      text-align: center;
+      margin-top: 6px;
+      font-size: 0px;
+    }
+    #主题 span{
+      font-size: 2rem;
+      vertical-align: baseline;
+      margin-left: 6px;
+    }
+    #主题 input{
+      border: none;
+      border-bottom: #666666 2px solid;
+      padding: 1px 0 0 0;
+      margin: 0px 6px 0 6px;
+      vertical-align: baseline;
+      font-size: 2rem;
+      background: #f8f8f8;
+      color: #333333;
+      text-align: center;
+      min-width: 20%;
+    }
+    #主题 button{
+      border: 0;
+      padding: 3px 7px 3px 7px;
+      margin: 0;
+      vertical-align: top;
+      font-size: 1.4rem;
+      background: #454545;
+      color: #efefef;
+    }
+    #文章 div{
+      margin-top: 6px;
+      font-size: 2rem;
+      text-align: justify;
+    }
+    #声明{
+      float: left;
+      margin: 0 0 0 6px;
+    }
+    #声明 p{
+      margin: 0 0 3px 3px;
+      font-size: 1.4rem;
+    }
+    #声明文字{
+      display: none;
+    }
+    #页脚{
+      margin: 6px;
+    }
+    #页脚 p{
+      margin: 3px;
+      font-size: 1.4rem;
+      text-align: right;
+    }
+    .链接{
+      color: #666666;
+    }
+    .图标{
+      height: 1rem;
+      width: 1rem;
+      vertical-align: top;
+      margin-top: 2px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    html{
+      font-size: 1.3vw;
+      color: #333333;
+    }
+    body{
+      margin: 0;
+    }
+    #主体{
+      border: 2px solid #333333;
+      margin: 20px;
+      padding: 20px;
+      background: #f8f8f8;
+    }
+    #标题{
+      font-size: 1.9rem;
+      line-height: 1.9rem;
+      text-align: center;
+    }
+    #主题{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0px;
+    }
+    #主题 span{
+      font-size: 1rem;
+      vertical-align: baseline;
+      margin-left: 20px;
+    }
+    #主题 input{
+      border: none;
+      border-bottom: #666666 2px solid;
+      padding: 1px 0 0 0;
+      margin: 0px 20px 0 20px;
+      vertical-align: baseline;
+      font-size: 1rem;
+      background: #f8f8f8;
+      color: #333333;
+      text-align: center;
+      min-width: 20%;
+    }
+    #主题 button{
+      border: 0;
+      padding: 5px 15px 5px 15px;
+      margin: 0;
+      vertical-align: top;
+      font-size: 0.75rem;
+      background: #454545;
+      color: #efefef;
+    }
+    #文章 div{
+      margin-top: 20px;
+      text-align: justify;
+    }
+    #声明{
+      float: left;
+      margin: 0 0 0 20px;
+    }
+    #声明 p{
+      margin: 0 0 5px 5px;
+      font-size: 0.75rem;
+    }
+    #声明文字{
+      display: none;
+    }
+    #页脚{
+      margin: 20px;
+    }
+    #页脚 p{
+      margin: 5px;
+      font-size: 0.75rem;
+      text-align: right;
+    }
+    .链接{
+      color: #666666;
+    }
+    #页脚 span{
+      padding: 2px 0 0 0;
+      vertical-align: baseline;
+    }
+    .图标{
+      height: 0.7rem;
+      width: 0.7rem;
+      vertical-align: top;
+      margin-top: 4px;
+    }
+  }
+</style>
