@@ -1,9 +1,9 @@
-# 文章生成器
-# BullshitGenerator
+# Essay Generator
+# BullshitGenerator (不知所云生成器)
 
-原项目地址 https://github.com/menzi11/BullshitGenerator
+Original project: https://github.com/menzi11/BullshitGenerator
 
-网页版地址 https://suulnnka.github.io/BullshitGenerator/index.html
+Chinese web version https://suulnnka.github.io/BullshitGenerator/index.html
 
 修改:  
 1.设计并移植至浏览器  
